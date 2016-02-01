@@ -10,8 +10,7 @@
   },
   "permissions": [
             "cookies",
-            "http://*/*",
-             "https://*/*",
-            "http://*.juzitime.com/"
+            "http://*.juzitime.com/",
+            "downloads"
   ]
 }

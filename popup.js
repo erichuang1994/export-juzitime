@@ -45,12 +45,17 @@ function getDiary(cookie_dict){
           // console.log(req.responseText);
           res_json = JSON.parse(req.responseText);
           // console.log(res_json);
+          export_str = ""
           for (var i = 0;i<res_json.totalEntries;i++){
             createdDate = new Date(res_json.entries[i]._created);
             content = res_json.entries[i].content;
-            console.log(createdDate);
-            console.log(content);
+            // console.log(createdDate);
+            export_str+=createdDate+'\n'+content+'\n\n';
+            // console.log(content);
           }
+          blob = new Blob([export_str],{type:"text/plain;charset=utf-8"});
+
+          saveAs(blob,"export.txt");
         }
       }
       url_template="http://www.juzitime.com/WebControl/showListJSON?page=1&pageSize=9999&userId="
