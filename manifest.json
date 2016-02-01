@@ -8,9 +8,13 @@
     "default_popup":"popup.html",
     "default_title":"点击导出"
   },
+  "icons": {
+    "128": "icon_128.png"
+  },
   "permissions": [
             "cookies",
             "http://*.juzitime.com/",
-            "downloads"
+            "downloads",
+            "tabs"
   ]
 }
